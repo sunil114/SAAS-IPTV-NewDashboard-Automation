@@ -7,10 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sunil Yadav",
   "license": "ISC",
-  "type": "commonjs",
-  "devDependencies": {
-    "cypress": "^16.0.0"
-  }
+  "type": "commonjs"
 }

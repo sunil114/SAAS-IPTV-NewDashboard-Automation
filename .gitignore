@@ -6,6 +6,10 @@ cypress/screenshots/
 cypress/videos/
 cypress/downloads/
 
+# Cypress reports
+cypress/reports/
+
+
 # Environment variables and secrets
 .env
 *.env
