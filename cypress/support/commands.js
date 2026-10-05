@@ -23,3 +23,38 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('login', () => {
+
+    cy.env(['email', 'password', 'appName']).then((env) => {
+
+        cy.request({
+            method: 'POST',
+            url: `/api/${env.appName}/v1/login`,
+
+            body: {
+                username: env.email,
+                password: env.password
+            }
+
+        }).then((response) => {
+
+            // Status code
+            expect(response.status).to.eq(200);
+
+            // Content type
+            expect(response.headers['content-type'])
+                .to.include('application/json');
+
+            // Response body
+            expect(response.body).to.exist;
+
+            //cy.log(JSON.stringify(response.body));
+            const accessToken = response.body.data.access_token;
+
+            return accessToken;
+
+        });
+
+    });
+})
