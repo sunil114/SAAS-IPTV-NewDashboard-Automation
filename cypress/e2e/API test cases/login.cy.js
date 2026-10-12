@@ -28,7 +28,7 @@ describe('WorldTV Login API', () => {
                 // Response body
                 expect(response.body).to.exist;
 
-                //cy.log(JSON.stringify(response.body));
+                cy.log(JSON.stringify(response.body));
 
             });
 

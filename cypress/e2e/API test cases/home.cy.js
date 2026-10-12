@@ -18,6 +18,7 @@ describe('Home API', () => {
             method: 'GET',
             url: `/api/${API_CONFIG.appName}/${API_CONFIG.version}/home`,
             headers: {
+                app: API_CONFIG.appName,
                 Authorization: `Bearer ${accessToken}`
             }
         }).then((response) => {
