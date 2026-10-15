@@ -13,6 +13,7 @@ cypress/reports/
 # Environment variables and secrets
 .env
 *.env
+cypress.env.json
 
 # Operating system files
 .DS_Store
